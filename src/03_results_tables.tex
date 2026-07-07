@@ -1,0 +1,33 @@
+% Publication-ready tables for StanBKT Experiments
+% Source logs:
+% - Fit: logs/02_fit_assist_MCMC_1989365.out, logs/02_fit_assist_VB_1973339.out,
+%        logs/02_fit_assist_MLE_1973341.out, logs/02_fit_assist_PATHFINDER_1973340.out
+% - Evaluation (MCMC fast paths): logs/03_evaulate_1973106.out
+% - Evaluation (VB, MLE fast paths): logs/03_evaulate_1973515.out
+% - Evaluation (PATHFINDER fast=True): logs/03_evaulate_1973477.out
+% Required packages: \usepackage{booktabs}, \usepackage{multirow}
+
+\begin{table*}[t]
+\centering
+\caption{Fit-time and test-set evaluation summary for pyBKT and StanBKT methods.}
+\label{tab:fit-eval-summary}
+\begin{tabular}{llrrrrrr}
+\toprule
+Method & Fast & Fit (s) & Eval (s) & Acc. & AUC & RMSE \\
+\midrule
+pyBKT & --- & 1.47 & 0.2939 & 0.693747 & 0.711130 & 0.449476 \\
+\midrule
+\multirow{2}{*}{StanBKT-MCMC}       & False & \multirow{2}{*}{806.96} & 933.3331 & 0.693911 & 0.711133 & 0.449471 \\
+                                     & True  &                         &  13.0539 & 0.693889 & 0.711111 & 0.449476 \\
+\midrule
+\multirow{2}{*}{StanBKT-VB}         & False & \multirow{2}{*}{663.88} & 582.5960 & 0.694418 & 0.711179 & 0.449475 \\
+                                     & True  &                         &  13.1821 & 0.694392 & 0.711174 & 0.449477 \\
+\midrule
+\multirow{2}{*}{StanBKT-MLE}        & False & \multirow{2}{*}{163.08} &  19.6792 & 0.693895 & 0.711105 & 0.449476 \\
+                                     & True  &                         &  13.2464 & 0.693895 & 0.711105 & 0.449476 \\
+\midrule
+\multirow{2}{*}{StanBKT-Pathfinder} & False & \multirow{2}{*}{289.57} & ---      & ---      & ---      & ---      \\
+                                     & True  &                         &  13.0541 & 0.693911 & 0.711108 & 0.449477 \\
+\bottomrule
+\end{tabular}
+\end{table*}

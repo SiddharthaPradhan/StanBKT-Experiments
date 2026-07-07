@@ -7,9 +7,17 @@ requires-python = ">=3.13"
 dependencies = [
     "ipykernel>=7.2.0",
     "ipython>=9.12.0",
+    "jinja2>=3.1.6",
+    "joblib>=1.3.0",
     "numpy>=2.4.4",
     "pandas>=3.0.2",
+    "pyarrow>=24.0.0",
     "requests>=2.33.1",
     "scikit-learn>=1.8.0",
     "setuptools>=82.0.1",
+    "stanbkt",
 ]
+
+[tool.uv.sources]
+stanbkt = { path = "stanbkt-0.1.1-py3-none-any.whl" }
+
