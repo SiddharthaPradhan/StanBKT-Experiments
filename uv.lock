@@ -1032,6 +1032,25 @@ wheels = [
 ]
 
 [[package]]
+name = "pybkt"
+version = "1.4.2"
+source = { directory = "pyBKT" }
+dependencies = [
+    { name = "numpy" },
+    { name = "pandas" },
+    { name = "requests" },
+    { name = "scikit-learn" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "numpy" },
+    { name = "pandas" },
+    { name = "requests" },
+    { name = "scikit-learn" },
+]
+
+[[package]]
 name = "pycparser"
 version = "3.0"
 source = { registry = "https://pypi.org/simple" }
@@ -1295,6 +1314,7 @@ dependencies = [
     { name = "numpy" },
     { name = "pandas" },
     { name = "pyarrow" },
+    { name = "pybkt" },
     { name = "requests" },
     { name = "scikit-learn" },
     { name = "setuptools" },
@@ -1310,6 +1330,7 @@ requires-dist = [
     { name = "numpy", specifier = ">=2.4.4" },
     { name = "pandas", specifier = ">=3.0.2" },
     { name = "pyarrow", specifier = ">=24.0.0" },
+    { name = "pybkt", directory = "pyBKT" },
     { name = "requests", specifier = ">=2.33.1" },
     { name = "scikit-learn", specifier = ">=1.8.0" },
     { name = "setuptools", specifier = ">=82.0.1" },

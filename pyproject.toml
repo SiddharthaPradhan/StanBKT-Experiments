@@ -16,8 +16,9 @@ dependencies = [
     "scikit-learn>=1.8.0",
     "setuptools>=82.0.1",
     "stanbkt",
+    "pybkt",
 ]
 
 [tool.uv.sources]
 stanbkt = { path = "stanbkt-0.1.1-py3-none-any.whl" }
-
+pybkt = { path = "./pyBKT" }
